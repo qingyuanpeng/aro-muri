@@ -36,7 +36,7 @@
             </nav>
         </div>
         <section>
-            <h1 class="display-4">Reading Group</h1>
+            <h1 class="display-4">Internal Discussion</h1>
             <hr class="mb-4">
 
 
@@ -54,6 +54,55 @@
                 </div>
             </div>
             {%endfor%}
+
+            <form method="POST" action="/home/" class="my-5">
+                {% csrf_token %}
+                <div class="mr-auto pull-right">
+                    <div class="form-group  pull-right">
+                        <textarea name="body" class="form-control" placeholder="How do you think of this project...." rows="4" style=" 
+                    border-color: #a7a7a7;"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-outline-dark btn-sm"> Send Comment </button>
+                </div>
+            </form>
+
+
+            <div class="card mx-auto mb-4" style="width: 100%">
+
+                <h6 class="card-header mb-0 align-text-bottom">
+                    <b class="font-weight-bold"> student1 </b><small class="text-muted"> 08/15 </small>
+                    <a class="close text-muted" href="/delete?id={{comment.id}}"><small>x</small></a>
+                </h6>
+                <div class="card-body">
+                    <p class="card-text">
+                        Chat1
+                    </p>
+                </div>
+            </div>
+            <div class="card mx-auto mb-4" style="width: 100%">
+
+                <h6 class="card-header mb-0 align-text-bottom">
+                    <b class="font-weight-bold"> student2 </b><small class="text-muted"> 08/07 </small>
+                    <a class="close text-muted" href="/delete?id={{comment.id}}"><small>x</small></a>
+                </h6>
+                <div class="card-body">
+                    <p class="card-text">
+                        Chat2
+                    </p>
+                </div>
+            </div>
+            <div class="card mx-auto mb-4" style="width: 100%">
+
+                <h6 class="card-header mb-0 align-text-bottom">
+                    <b class="font-weight-bold"> student3 </b><small class="text-muted"> 08/05 </small>
+                    <a class="close text-muted" href="/delete?id={{comment.id}}"><small>x</small></a>
+                </h6>
+                <div class="card-body">
+                    <p class="card-text">
+                        Chat3
+                    </p>
+                </div>
+            </div>
     </body>
 
 </html>
